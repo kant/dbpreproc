@@ -1,0 +1,25 @@
+# This is a comment
+
+# More comments here!
+
+substitute "name=default name"
+
+# in this template expansion, name is default name
+expand("testdata/simple.sdb") {
+ifdef(override) {
+  macro(name, "should never set this name")
+}
+  macro(drvh, "expand_drvh")
+  macro(flnk, "expand_flnk PP")
+}
+
+substitute override=1
+
+# in this template expansion, name is overriden as override is set
+expand("testdata/simple.sdb") {
+ifdef(override) {
+  macro(name, "overridden name")
+}
+  macro(drvh, "expand_drvh")
+  macro(flnk, "expand_flnk PP")
+}
