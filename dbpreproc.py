@@ -5,6 +5,8 @@ alternative to the msi macro substitution tool. Some features were
 inspired by the VisualDCT macro substitution tool.
 
 See the README.md file for more information.
+
+Copyright 2012 Australian National University. Licensed under the new BSD License, as specified in the LICENSE file.
 """
 import sys
 import os

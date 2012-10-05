@@ -1,3 +1,8 @@
+"""
+Module for parsing & validation of EPICS database definition (dbd) files.
+
+Copyright 2012 Australian National University. Licensed under the new BSD License, as specified in the LICENSE file.
+"""
 from pyparsing import *
 from parserutils import *
 import os
@@ -5,10 +10,6 @@ import re
 import dbparser
 import pickle
 import traceback
-
-"""
-Parsing & validation module for dbd files.
-"""
 
 name = Word(alphanums+"_") # valid name format for DBD names (also library symbol names)
 

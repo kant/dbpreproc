@@ -1,3 +1,8 @@
+"""
+Module for parsing dbpreproc source database syntax.
+
+Copyright 2012 Australian National University. Licensed under the new BSD License, as specified in the LICENSE file.
+"""
 from pyparsing import *
 from parserutils import *
 import os
@@ -9,8 +14,6 @@ def find_file(filename):
         if os.path.exists(full_path):
             return full_path
     return filename # failure gets handled later on
-
-## Parsing grammar for template database files
 
 eol = LineEnd().suppress()
 
