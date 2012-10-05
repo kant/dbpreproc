@@ -8,6 +8,6 @@ record(ai, "$(section_name):vacuum") {
   field(EGUL, "0")
   field(EGUF, "1")
   field(PREC, "8")
-  field(HIGH, "$(warning_level)")
+  field(HIGH, "$(warning_level|0.00001)")
   field(HSV, "MAJOR")
 }

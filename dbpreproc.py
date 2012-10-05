@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 """
-pymsi is a powerful python-based alternative to the msi macro substitution tool. Some features were inspired by the VisualDCT macro substitution tool.
+dbpreproc is a powerful database preprocessor for EPICS databases, an
+alternative to the msi macro substitution tool. Some features were
+inspired by the VisualDCT macro substitution tool.
 
-See the documentation page, under epicsapps/doc/pymsi.rst, for more information.
+See the README.md file for more information.
 """
 import sys
 import os
@@ -19,7 +21,7 @@ parser.add_argument('--dbd', help='Verify database output against specified DBD 
 parser.add_argument('--dbd-cache', help="Optional cache file to read/write parsed DBD data. Can save time if you're building a lot of databases and verifying against the same DBD file")
 parser.add_argument('-I', '--include', help='Specify paths to search for included/expanded files (can be repeated, or paths can be colon-delimited.)',
                     action='append')
-parser.add_argument('-m', '--allow-missing', help="Do not error out if a macro is missing, just expand to an empty value (this is the default msi behaviour, but not the pymsi default.)",
+parser.add_argument('-m', '--allow-missing', help="Do not error out if a macro is missing, just expand to an empty value (this is the default msi behaviour, but not the dbpreproc default.)",
                     action='store_true')
 parser.add_argument('-v', '--verbose', help="Produce verbose parsing output on stderr.",
                     action='store_true')
